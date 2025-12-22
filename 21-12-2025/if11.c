@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int a;
+    scanf("%d",&a);
+    printf("a:%d\n",a);
+    if((a>=-9)&&(a<=9))
+    printf("single digit");
+    else
+    printf("non single digit");
+    return 0;
+}
