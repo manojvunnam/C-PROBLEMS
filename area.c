@@ -1,10 +1,9 @@
 #include <stdio.h>
 int main() {
-    int a,b,c;
-    scanf("%d%d%d",&a,&b,&c);
-    printf("a:%d b:%d c:%d",a,b,c);
-    int area=a*b*c;
-    printf("area=%d",area);
-    
+    int r;
+    scanf("%d",&r);
+    float pie=3.14;
+    float area=pie*(r)*(r);
+    printf("%f",area);
     return 0;
 }
