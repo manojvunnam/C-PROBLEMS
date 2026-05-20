@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+ printf("I like watching sci-fi movies\r");
+ printf("I enjoy eating pizza\r");
+printf("I love playing mobile games\r");
+printf("I enjoy late night music\r");
+printf("I like spending time with family\r");
+printf("I enjoy funny memes on social media\r");
+printf("I like learning about gadgets\r");
+printf("I enjoy photography and editing\r");
+printf("I love watching cricket highlights\r");
+printf("I enjoy riding bikes with friends\r");
+printf("I like exploring new apps\r");
+printf("I enjoy peaceful places\r");
+printf("I love watching motivational content\r");
+printf("I enjoy talking with friends\r");
+printf("I like creative thinking\r");
+ printf("I enjoy trying street food\r");
+ printf("I love technology and innovation\r");
+printf("I enjoy gaming competitions\r");
+printf("I like watching web series\r");
+printf("I enjoy learning life skills\r");
+printf("I love spending time online\r");
+printf("I enjoy fun college activities\r");
+printf("I like discovering new interests\r");
+printf("I enjoy relaxing with music\r");
+    return 0;
+}
