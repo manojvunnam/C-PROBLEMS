@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+    printf("My name is Manoj\n");
+    printf("I am a college student\n");
+    printf("I am learning C programming\n");
+    printf("I like coding and technology\n");
+    printf("I practice programming every day\n");
+    printf("I enjoy solving logical problems\n");
+    printf("I want to become a software engineer\n");
+    printf("I am improving my communication skills\n");
+    printf("I like participating in presentations\n");
+    printf("I enjoy learning new programming languages\n");
+    printf("I am interested in artificial intelligence\n");
+    printf("I like creative and innovative ideas\n");
+    printf("I want to improve my typing speed\n");
+    printf("I enjoy teamwork and collaboration\n");
+    printf("I like helping my friends\n");
+    printf("I am focused on my career goals\n");
+    printf("I enjoy exploring new technologies\n");
+    printf("I believe practice improves skills\n");
+    printf("I like attending college events\n");
+    printf("I am becoming more confident daily\n");
+    printf("I enjoy building simple projects\n");
+    printf("I want to gain more knowledge\n");
+    printf("I believe hard work brings success\n");
+    printf("I always try to stay positive\n");
+    return 0;
+}
