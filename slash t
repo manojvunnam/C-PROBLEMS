@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main() {
+    printf("1.\tMy name is Manoj.\n");
+    printf("2.\tI am interested in coding.\n");
+    printf("3.\tI like learning C programming.\n");
+    printf("4.\tI enjoy improving my typing skills.\n");
+    printf("5.\tI love creating new ideas for projects.\n");
+    printf("6.\tI am interested in AI and technology.\n");
+    printf("7.\tI like giving presentations.\n");
+    printf("8.\tI enjoy teamwork activities.\n");
+    printf("9.\tI like solving logical problems.\n");
+    printf("10.\tI am learning communication skills.\n");
+    printf("11.\tI enjoy watching tech videos.\n");
+    printf("12.\tI like helping my friends.\n");
+    printf("13.\tI am interested in business ideas.\n");
+    printf("14.\tI enjoy learning new software tools.\n");
+    printf("15.\tI like participating in college events.\n");
+    printf("16.\tI enjoy practicing English daily.\n");
+    printf("17.\tI like designing presentations.\n");
+    printf("18.\tI enjoy exploring real-world problems.\n");
+    printf("19.\tI am interested in app development.\n");
+    printf("20.\tI like learning about computers.\n");
+    printf("21.\tI enjoy creative thinking.\n");
+    printf("22.\tI like improving my stage confidence.\n");
+    printf("23.\tI enjoy working on innovative ideas.\n");
+    printf("24.\tI like learning with my friends.\n");
+    printf("25.\tMy goal is to become successful in life.\n");
+    return 0;
+}
