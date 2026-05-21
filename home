@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int a = 10;
+    int b = 20, c = 30;
+    int d;
+    d = 40;
+    int e = 'A';
+    printf("Decimal value of a = %d\n", a);
+    printf("Value of b = %i\n", b);
+    printf("Unsigned value of c = %u\n", c);
+    printf("Hexadecimal of d = %x\n", d);
+    printf("Hexadecimal CAPITAL of d = %X\n", d);
+    printf("Character stored in e = %c\n", e);
+    printf("ASCII value of e = %d\n", e);
+    int num;
+    printf("\nEnter an integer value : ");
+    scanf("%d", &num);
+    printf("\nNormal printing= %d\n", num);
+    printf("Right aligned= %10d\n", num);
+    printf("Left aligned= %-10dEND\n", num);
+    printf("Print with zeros= %06d\n", num);
+    printf("Print with + sign= %+d\n", num);
+    return 0;
+}
