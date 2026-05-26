@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+int main() 
+{
+char sub1[10],sub2[10],sub3[10],sub4[10],sub5[10],sub6[10];
+scanf("%s %s %s %s %s %s",&sub1,&sub2,&sub3,&sub4,&sub5,&sub6);
+printf("enter the sub=",sub1,sub2,sub3,sub4,sub5,sub6);
+int m1,m2,m3,m4,m5,m6;
+printf("Enter marks of 6 subjects:\n");
+scanf("%d %d %d %d %d %d",&m1,&m2,&m3,&m4,&m5,&m6);
+printf("\nMarks of 6 Subjects:\n");
+printf("%s= %d\n", sub1,m1);
+printf("%s= %d\n", sub2,m2);
+printf("%s= %d\n", sub3,m3);
+ printf("%s= %d\n", sub4,m4);
+printf("%s= %d\n", sub5,m5);
+ printf("%s= %d\n", sub6,m6);
+ int sum = m1+m2+m3+m4+m5+m6;
+ printf("sum=%d\n",sum);
+printf("average of marks=%d",sum/6);
+ return 0;
+}
