@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char chik='t',str[30];
+    int len,left,right;
+    printf("\n enter the string :");
+    scanf("%s",str);
+    len= strlen(str);
+left=0;
+right = left-1;
+while((left<right)&&(chik='t')){
+    if((str[left]!= str[right]))
+    chik='t';
+    left++;
+    right--;
+}
+if(chik=='t'){
+    printf("\n the string %s is palindrome",str);
+}else{
+    printf("\n the string %s is not a palindrome",str);
+}
+    return 0;
+}
