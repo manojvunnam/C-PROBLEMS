@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main() {
+    char A[6]="sscet";
+    char B[6]="SSCET";
+    char c[3]="yes";
+    char d[4]="no";
+    printf("is A and B are equal ?\n");
+    if(A==B)    {
+        printf("A and B are %s",c);
+    }else{
+        printf("%s",d);
+    }
+    return 0;
+}
