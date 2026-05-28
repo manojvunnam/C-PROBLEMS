@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    int *p1, *p2;
+
+    p1 = &a;
+    p2 = &b;
+
+    printf("address of a = %p and b = %p\n", (void*)&a, (void*)&b);
+
+    char c, d;
+    char *p3, *p4;
+
+    p3 = &c;
+    p4 = &d;
+
+    printf("address of c = %p and d = %p\n", (void*)&c, (void*)&d);
+
+    float e, f;
+    float *p5, *p6;
+
+    p5 = &e;
+    p6 = &f;
+
+    printf("address of e = %p and f = %p\n", (void*)&e, (void*)&f);
+
+    p1++;
+    p2++;
+
+    printf("after increment p1 = %p and p2 = %p\n", (void*)p1, (void*)p2);
+
+    p3++;
+    p4++;
+
+    printf("after increment p3 = %p and p4 = %p\n", (void*)p3, (void*)p4);
+
+    p5++;
+    p6++;
+
+    printf("after increment p5 = %p and p6 = %p\n", (void*)p5, (void*)p6);
+
+    return 0;
+}
