@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    char *name;
+    int length;
+    char *cptr=name;
+    name="ONGOLE";
+    printf("%s\n",name);
+    while(*cptr!='\0'){
+        printf("%c is stored at address %p\n",*cptr,cptr);
+        cptr++;
+    }
+    length = cptr-name;
+    printf("\nlength of the string=%u\n",length);
+    return 0;
+}
