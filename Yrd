@@ -1,0 +1,113 @@
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+#include <string.h>
+#include <stdlib.h>
+
+#define HASH_SIZE 10007
+
+typedef struct Node {
+    char *word;
+    int id;
+    struct Node *next;
+} Node;
+
+Node *hash[HASH_SIZE];
+
+unsigned hashFunc(char *s, int len) {
+    unsigned h = 0;
+    for (int i = 0; i < len; i++)
+        h = h * 131 + s[i];
+    return h % HASH_SIZE;
+}
+
+int getId(char *s, int len) {
+    unsigned h = hashFunc(s, len);
+    Node *p = hash[h];
+    while (p) {
+        if (strncmp(p->word, s, len) == 0 && p->word[len] == '\0')
+            return p->id;
+        p = p->next;
+    }
+    return -1;
+}
+
+int* findSubstring(char* s, char** words, int wordsSize, int* returnSize) {
+    *returnSize = 0;
+
+    int n = strlen(s);
+    int wlen = strlen(words[0]);
+    int total = wlen * wordsSize;
+
+    int *res = malloc(sizeof(int) * n);
+
+    if (n < total)
+        return res;
+
+    memset(hash, 0, sizeof(hash));
+
+    int *need = malloc(sizeof(int) * wordsSize);
+    int unique = 0;
+
+    for (int i = 0; i < wordsSize; i++) {
+        unsigned h = hashFunc(words[i], wlen);
+        Node *p = hash[h];
+
+        while (p && strcmp(p->word, words[i]) != 0)
+            p = p->next;
+
+        if (p)
+            need[p->id]++;
+        else {
+            Node *node = malloc(sizeof(Node));
+            node->word = words[i];
+            node->id = unique;
+            node->next = hash[h];
+            hash[h] = node;
+            need[unique++] = 1;
+        }
+    }
+
+    for (int offset = 0; offset < wlen; offset++) {
+
+        int *cnt = calloc(unique, sizeof(int));
+        int left = offset;
+        int match = 0;
+
+        for (int right = offset; right + wlen <= n; right += wlen) {
+
+            int id = getId(s + right, wlen);
+
+            if (id == -1) {
+                memset(cnt, 0, unique * sizeof(int));
+                match = 0;
+                left = right + wlen;
+                continue;
+            }
+
+            cnt[id]++;
+            match++;
+
+            while (cnt[id] > need[id]) {
+                int x = getId(s + left, wlen);
+                cnt[x]--;
+                match--;
+                left += wlen;
+            }
+
+            if (match == wordsSize) {
+                res[(*returnSize)++] = left;
+                int x = getId(s + left, wlen);
+                cnt[x]--;
+                match--;
+                left += wlen;
+            }
+        }
+
+        free(cnt);
+    }
+
+    free(need);
+
+    return res;
+}
