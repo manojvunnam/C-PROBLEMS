@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    float cm, inches, feet;
+
+    scanf("%f", &cm);
+
+    inches = cm / 2.54;
+    feet = cm / 30.48;
+
+    printf("Inches = %.2f\n", inches);
+    printf("Feet = %.2f\n", feet);
+
+    return 0;
+}
