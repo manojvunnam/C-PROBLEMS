@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main() {
+char name[20]="jaibalayya";
+char don[20]="god of masses";
+ strcat(don,name);
+int n;
+n = strlen(name);
+printf("length of string=%d\n",n);
+printf("%s\n",strupr(name));
+printf("%s\n",don);
+    return 0;
+}
